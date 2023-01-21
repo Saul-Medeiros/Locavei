@@ -20,4 +20,7 @@
  <li>adicionarSeguro(idade: int): modifica o valor do aluguel de acordo com a idade informada pelo cliente.</li>
 </ul>
 <b>D. Diagrama de Classes</b>
-[diagrama_locavei]()
+<br>
+<img src="https://github.com/Saul-Medeiros/Locavei/blob/main/Main.jpg"/>
+<hr>
+<p>Código feito utilizando Netbeans IDE 8.2 e diagrama de classes feito no StarUML.</p> 
