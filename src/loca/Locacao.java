@@ -1,39 +1,41 @@
 package loca;
 
-//importação da classe CarroPopular do pacote fro
+// importação da classe CarroPopular do pacote fro
 import fro.CarroPopular;
-//importação da classe Scanner do pacote java.util
+// importação da classe Scanner do pacote java.util
 import java.util.Scanner;
-//importação da classe DecimalFormat do pacote java.text
+// importação da classe DecimalFormat do pacote java.text
 import java.text.DecimalFormat;
 
 public class Locacao {
-    /*declaração de atributos*/
-    private CarroPopular carP = new CarroPopular("","",0,0,0f);//declaração e instância de classe
+    // Declaração de atributos
     private int codLoca;
     private int diasLoca;
     private float valorLoca;
     private float valorTotal;
-    
-    /*Método construtor*/
+
+    // Declaração e instância de classe
+    private CarroPopular carP = new CarroPopular("","",0,0,0f);
+
+    // Método construtor
     public Locacao (int codLoca, int diasLoca){
         this.codLoca=codLoca;
         this.diasLoca=diasLoca;
     }
     
-    /*Módulo de entrada de dados*/
+    // Módulo de entrada de dados
     public void mostraModuloED() {
         System.out.println("||| Sistema de Locação de Veiculos - LOCAVEI |||"
                 + " \nModulo : LOCAÇÃO         Entrada de Dados ");
     }
     
-    /*Módulo de saída de dados*/
+    // Módulo de saída de dados
     public void mostraModuloSD() {
         System.out.println("\n||| Sistema de Locação de Veículos - LOCAVEI |||"
                 + " \nModulo : LOCAÇÃO         Saída de Dados ");
     }
     
-    /*Método para cadastro de locação*/
+    // Método para cadastro de locação
     public void cadastra(){
         Scanner sc = new Scanner(System.in);
         System.out.print("\nEntre com o código da locação: ");
@@ -42,7 +44,7 @@ public class Locacao {
         getCarP().cadastra();
     }
     
-    /*Método para mostrar as informações recebidas no cadastro*/
+    // Método para mostrar as informações recebidas no cadastro
     @Override
     public String toString(){
         DecimalFormat df = new DecimalFormat("R$ #,##0.00");
@@ -55,7 +57,7 @@ public class Locacao {
                 "\n\nDADOS DO VEÍCULO:\n"+getCarP());
     }
 
-    /*Métodos acessores get e set*/
+    // Métodos acessores e modificadores
 
     public int getCodLoca() {
         return codLoca;

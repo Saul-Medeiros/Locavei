@@ -11,7 +11,7 @@ public class CarroPopular extends Automovel {
         this.adcSeguro=adcSeguro;
     }
     
-    /*Método para cadastro de veículo popular*/
+    // Método para cadastro de veículo popular
     @Override
     public void cadastra(){
         System.out.println("Carros populares disponíveis para locação:"
@@ -29,31 +29,23 @@ public class CarroPopular extends Automovel {
         super.cadastra();
     }
     
-    /**
-     * Implementa o serviço de adicional do seguro de acordo com a idade do 
-     * usuário
-     * 
-     * @return 
-     */
     @Override
-    public String adicionarSeguro(int idade){
+    public void adicionarSeguro(int idade){
         calcularPreco();
-        //idade menor que 25 e maior que 65 é implementado o adicional de seguro
+        /* se a idade for menor que 25 ou maior que 65 é implementado o 
+         * adicional de seguro
+         */
         if (idade > 65 || idade < 25){
-            //seguro adicional de 10% do valor do aluguel
+            // seguro adicional de 10% do valor do aluguel
             setAdcSeguro(0.1f * calcularPreco());
-            return ("Houve um adicional do seguro de: "+
-                    df.format(getAdcSeguro()));
-        }else{
-            return ("Não houve adicional de seguro no contrato do veículo!");
         }
     }
     
     /**
-     * Cslcula o preço da locação de acordo com o modelo informado e os dias 
-     * alugados
+     * Calcula o preço da locação de acordo com o modelo informado e os dias 
+     * alugados.
      * 
-     * @return 
+     * @return O cálculo de preço referente ao modelo escolhido.
      */
     @Override
         public float calcularPreco() {
@@ -78,10 +70,10 @@ public class CarroPopular extends Automovel {
                 preco= 241*getDiaAlu()+getDiaAlu();
                 break;
         }
-        return preco;//retorna o valor armazenado da variavel local pro método
+        return preco;
     }
     
-    /*Método para exibir as informações do carro popular*/
+    // Método para exibir as informações do carro popular
     @Override
     public String toString(){
         return (super.toString()+"\nQUILOMETRAGEM: "+getKm()+"km"+
