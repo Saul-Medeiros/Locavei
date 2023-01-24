@@ -14,17 +14,7 @@ public class TesteLocacao {
         loca.mostraModuloED();
         loca.cadastra();  // cadastro de locação
         // Os veículos são armazenados e recuperados para validação 
-        boolean check1 = loca.getCarP().validar("Honda Civic");
-        boolean check2 = loca.getCarP().validar("Chevrolet Prisma");
-        boolean check3 = loca.getCarP().validar("Volkswagen Jetta");
-        boolean check4 = loca.getCarP().validar("Fiat Cronos");
-        boolean check5 = loca.getCarP().validar("Jeep Renegade");
-        boolean check6 = loca.getCarP().validar("Renault Duster");
-        if (!check1 && !check2 && !check3 && !check4 && !check5 && !check6){
-            System.out.println("O carro informado não está disponível em nosso "
-                    + "sistema ou não existe.\nSistema encerrado!!");
-            System.exit(0);
-        }
+        loca.getCarP().validar(loca.getCarP().getModelo());
         loca.mostraModuloSD();
         
         /* Confere se terá adicional de seguro de acordo com a idade informada 
