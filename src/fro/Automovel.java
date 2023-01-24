@@ -44,20 +44,30 @@ public abstract class Automovel {
     }    
     
     /**
-     * Método para retornar se o veículo informado está disponivel no sistema
-     * torna válida a declaração da variável disp
+     * Método para validar se o veículo informado está disponivel no sistema
      * 
-     * @param modelo
-     * @return disp
+     * @param modelo: Armazena o carro informado para validação
      */
-    public boolean validar(String modelo){
-        if (this.getModelo().equals(modelo)){
+    public void validar(String modelo){
+        String check1 = "Honda Civic";
+        String check2 = "Chevrolet Prisma";
+        String check3 = "Volkswagen Jetta";
+        String check4 = "Fiat Cronos";
+        String check5 = "Jeep Renegade";
+        String check6 = "Renault Duster";
+
+        if (check1.equals(modelo) || check2.equals(modelo) ||
+                check3.equals(modelo) || check4.equals(modelo) ||
+                check5.equals(modelo) || check6.equals(modelo)){
             System.out.println("Veículo está disponível para locação!");
             setDisp(true);
-        }else{
+        } else {
+            System.out.println("O carro informado não está disponível em" +
+                    " nosso sistema ou não existe.\n" +
+                    "Sistema Encerrado!!");
+            System.exit(0);
             setDisp(false);
         }
-        return disp;
     }
     
     /**
