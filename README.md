@@ -16,7 +16,7 @@
 </ul>
 <b>C. Regras de Negócio</b>
 <ul>
- <li>validar(modelo: String): retorna uma mensagem informando a disponibilidade do veículo.</li>
+ <li>validar(modelo: String): retorna uma mensagem informando a disponibilidade do veículo e encerra o sistema se caso o veículo não estiver disponível.</li>
  <li>adicionarSeguro(idade: int): modifica o valor do aluguel de acordo com a idade informada pelo cliente.</li>
 </ul>
 <b>D. Diagrama de Classes</b>
