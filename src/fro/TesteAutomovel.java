@@ -15,17 +15,7 @@ public class TesteAutomovel {
         System.out.println();  // Pula linha
         carP.cadastra();
         // Os modelos são armazenados e recuperados para validação
-        boolean check1 = carP.validar("Honda Civic");
-        boolean check2 = carP.validar("Chevrolet Prisma");
-        boolean check3 = carP.validar("Volkswagen Jetta");
-        boolean check4 = carP.validar("Fiat Cronos");
-        boolean check5 = carP.validar("Jeep Renegade");
-        boolean check6 = carP.validar("Renault Duster");
-        if (!check1 && !check2 && !check3 && !check4 && !check5 && !check6){
-            System.out.println("O carro informado não está disponível em nosso "
-                    + "sistema ou não existe.\nSistema encerrado!!");
-            System.exit(0);
-        }
+        carP.validar(carP.getModelo());
         carP.mostraModuloSD();
         
         /* A idade do cliente não faz parte desse módulo, deve ser informado
